@@ -29,6 +29,12 @@ namespace Temp.Controllers
             return View(books);
         }
 
+        public IActionResult Add()
+        {
+            ViewData["Title"] = "Book Home Add Page";
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
@@ -38,6 +44,26 @@ namespace Temp.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public IActionResult RsvpForm(BookItem item)
+        {
+            if(ModelState.IsValid)
+            {
+                ViewBag.Message="Successful";
+                return View();
+            }
+            else
+            {
+                ViewBag.Message="";
+                foreach (var modelState in ViewData.ModelState.Values) {
+                foreach (var error in modelState.Errors) {
+                    ViewBag.Message+=error.ErrorMessage+"\r\n";
+                }}
+
+                return View();
+            }
         }
     }
 }

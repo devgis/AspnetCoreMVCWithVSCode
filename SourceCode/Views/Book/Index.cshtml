@@ -1,0 +1,14 @@
+﻿@model List<BookItem>
+<div class="text-center">
+    <h1 class="display-4">Welcome to @ViewData["Title"]</h1>
+    <table>
+        <thead><tr><th>ID</th><th>Name</th><th>Author</th></tr></thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr><td>@item.ID</td><td>@item.Name</td><td>@item.Autor</td></tr>
+            }
+        </tbody>
+    </table>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

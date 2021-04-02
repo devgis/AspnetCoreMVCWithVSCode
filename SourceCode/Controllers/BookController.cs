@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Temp.Models;
@@ -18,6 +19,7 @@ namespace Temp.Controllers
             _logger = logger;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             ViewData["Title"] = "Book Home Page";
@@ -29,7 +31,8 @@ namespace Temp.Controllers
             return View(books);
         }
 
-        public IActionResult Add()
+       [Authorize]
+       public IActionResult Add()
         {
             ViewData["Title"] = "Book Home Add Page";
             return View();

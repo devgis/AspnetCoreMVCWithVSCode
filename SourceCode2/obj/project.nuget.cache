@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZK2/OyzAiq0puftyp4R/20wtWl517ih0d24YJuq5EtGNznAJdQica8t4Ot8b5rLshka8yPS33eGTUM/tQJ8XOA==",
+  "success": true,
+  "projectFilePath": "/home/liyafei/Documents/AspnetCoreMVCWithVSCode/SourceCode2/Temp.csproj",
+  "expectedPackageFiles": [
+    "/home/liyafei/.nuget/packages/microsoft.aspnetcore.authorization/5.0.4/microsoft.aspnetcore.authorization.5.0.4.nupkg.sha512",
+    "/home/liyafei/.nuget/packages/microsoft.aspnetcore.metadata/5.0.4/microsoft.aspnetcore.metadata.5.0.4.nupkg.sha512",
+    "/home/liyafei/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/5.0.0/microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "/home/liyafei/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "/home/liyafei/.nuget/packages/microsoft.extensions.options/5.0.0/microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "/home/liyafei/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

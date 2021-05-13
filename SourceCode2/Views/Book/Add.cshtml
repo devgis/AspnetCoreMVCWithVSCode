@@ -1,0 +1,13 @@
+﻿@model BookItem
+<div class="text-center">
+    <h1 class="display-4">Welcome to @ViewData["Title"]</h1>
+    @using(Html.BeginForm("RsvpForm","Book",@Model,FormMethod.Post))
+    {
+        @Html.ValidationSummary()
+        <p><label>ID:</label>@Html.TextBoxFor(x=>x.ID,new {@class="formcontrol"})</p>
+        <p><label>Name:</label>@Html.TextBoxFor(x=>x.Name,new {@class="formcontrol"})</p>
+        <p><label>Autor:</label>@Html.TextBoxFor(x=>x.Autor,new {@class="formcontrol"})</p>
+        <input class="btn" type="submit" value="Submit"/>
+    }
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

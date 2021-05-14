@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using Temp.Controllers;
 
 namespace Temp
 {
@@ -15,7 +16,7 @@ namespace Temp
     {
         public object CreateController(ControllerContext context)
         {
-            return null;            
+            return new MyCommonController2();            
         }
         //
         // Summary:

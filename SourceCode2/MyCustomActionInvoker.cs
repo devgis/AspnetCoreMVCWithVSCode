@@ -12,7 +12,8 @@ using Microsoft.AspNetCore.Mvc.Abstractions;
 
 namespace Temp
 {
-    public class MyCustomActionInvoker:IActionInvoker
+    /*
+    public class MyCustomActionInvoker:System.Web.Mvc.IActionInvoker
     {
         public bool InvokeAction(ControllerContext controllerContext, string actionName)
         {
@@ -26,5 +27,8 @@ namespace Temp
                 return false;
             }
         }
+
+        InvokeAsync
     }
+    */
 }

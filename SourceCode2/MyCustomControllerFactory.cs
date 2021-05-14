@@ -7,21 +7,28 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Temp
 {
     public class MyCustomControllerFactory:IControllerFactory
     {
-        public static void Main(string[] args)
+        public object CreateController(ControllerContext context)
         {
-            CreateHostBuilder(args).Build().Run();
+            return null;            
         }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+        //
+        // Summary:
+        //     Releases a controller instance.
+        //
+        // Parameters:
+        //   context:
+        //     Microsoft.AspNetCore.Mvc.ControllerContext for the executing action.
+        //
+        //   controller:
+        //     The controller.
+        public void ReleaseController(ControllerContext context, object controller)
+        {
+        }
     }
 }

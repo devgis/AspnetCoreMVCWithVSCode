@@ -11,6 +11,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Temp
 {
@@ -45,8 +47,8 @@ namespace Temp
             
             });
 
-            ////Overriding the default ControllerFactory
-            //services.AddSingleton<IControllerFactory, MyCustomControllerFactory>();
+            //Overriding the default ControllerFactory
+            services.AddSingleton<IControllerFactory, MyCustomControllerFactory>();
 
         }
 
